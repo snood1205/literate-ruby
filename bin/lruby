@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require 'literate-ruby'
+
+outputs = []
+exit_status = 0
+
+ARGV.each do |f|
+  if f[-4..-1] != '.lrb'
+    STDERR.puts "Error: #{f} is not a literate ruby file."
+    exit_status = 1
+  else
+    j = LiterateRuby::File.new(f)
+    outputs << j.parse
+    j.rewind
+    outputs << j.to_markdown
+  end
+end
+
+puts "Files created:"
+outputs.each{|i| puts "  x - #{i}"}
+exit exit_status

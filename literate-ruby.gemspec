@@ -5,14 +5,15 @@ Gem::Specification.new do |s|
 This gem is hightly inspired by literate haskell. It currently will support 
 "bird style" which is described in full [here](https://wiki.haskell.org/Literate_programming#Bird_Style).
 EOF
-  s.version = '0.1.2'
+  s.version = '0.2.0'
   s.author = 'Eli Sadoff'
   s.email = 'snood1205@gmail.com'
   s.license = 'MIT'
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = '>=1.9.3'
   s.date = '2017-01-11'
-  s.files = %w(Rakefile lib/literate-ruby.rb bin/literate-ruby) + Dir['lib/literate-ruby/*rb']
+  s.executable = 'lruby'
+  s.files = %w(Rakefile lib/literate-ruby.rb bin/lruby) + Dir['lib/literate-ruby/*rb']
   s.files.concat Dir['**/*.rdoc']
   s.test_files = Dir['test/test_*.rb']
   s.homepage = 'https://github.com/snood1205/literate-ruby'
