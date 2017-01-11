@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 This gem is hightly inspired by literate haskell. It currently will support 
 "bird style" which is described in full [here](https://wiki.haskell.org/Literate_programming#Bird_Style).
 EOF
-  s.version = '0.1.1'
+  s.version = '0.1.2'
   s.author = 'Eli Sadoff'
   s.email = 'snood1205@gmail.com'
   s.license = 'MIT'

@@ -27,8 +27,8 @@ module LiterateRuby
     # extension `.md`). 
     #
     # @param [Boolean] ghfm if true then it will be written in github
-    # flavored markdown. Otherwise it will be in a more traditional
-    # markdown format.
+    #   flavored markdown. Otherwise it will be in a more traditional
+    #   markdown format
     # @return [String] the file_path to the markdown file.
     def to_markdown(ghfm = false)
       base = File.basename(path, '.*')
