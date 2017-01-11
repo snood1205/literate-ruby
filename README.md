@@ -5,6 +5,21 @@ Version](https://badge.fury.io/rb/LiterateRuby.svg)](https://badge.fury.io/rb/Li
 ## Name
 The name is inspired by Literate Haskell.
 
+## Installation
+This gem can be install using `gem` as follows:
+
+```bash
+gem install LiterateRuby
+```
+
+## Executable
+
+The executable for this is called `lruby`. It can be used as such
+
+```bash
+lruby file.lrb
+```
+
 ## Usage
 
 A file like this
