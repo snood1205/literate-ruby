@@ -22,6 +22,7 @@ and here is some more commentary.
 >  end
 >  # if you want to 
 > end 
+```
 
 This is called bird style. There are specs on it
 [here](https://wiki.haskell.org/Literate_programming#Bird_Style).
