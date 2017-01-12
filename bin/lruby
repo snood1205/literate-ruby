@@ -4,10 +4,17 @@ require 'literate-ruby'
 outputs = []
 exit_status = 0
 
+flags = ARGV.select { |i| i[0] == '-' }
+eval_flag = flags.include?('-e')
+ARGV.reject! { |i| i[0] == '-' }
+
 ARGV.each do |f|
   if f[-4..-1] != '.lrb'
     STDERR.puts "Error: #{f} is not a literate ruby file."
     exit_status = 1
+  elsif eval_flag
+    j = LiterateRuby::File.new(f)
+    outputs << j.to_eval_markdown
   else
     j = LiterateRuby::File.new(f)
     outputs << j.parse
@@ -16,6 +23,6 @@ ARGV.each do |f|
   end
 end
 
-puts "Files created:"
-outputs.each{|i| puts "  x - #{i}"}
+puts 'Files created:'
+outputs.each { |i| puts "  x - #{i}" }
 exit exit_status

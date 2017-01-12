@@ -12,6 +12,11 @@ task :clean do
   `rm *.gem`
 end
 
+task :install do
+  `gem build literate-ruby.gemspec`
+  `gem install *.gem`
+end
+
 task :build do
   `gem build literate-ruby.gemspec`
 end
